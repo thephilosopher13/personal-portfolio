@@ -105,6 +105,8 @@ const homepageModule = (() => {
         const content = document.getElementById('content')
         const homeContent = createHomeContentDiv()
 
+        content.innerHTML = ''
+
         content.appendChild(homeContent)
     }
 
