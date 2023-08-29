@@ -3,7 +3,12 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
   mode: 'development',
-  entry: './src/index.js',
+  entry: {
+    home : './src/pages/home.js',
+    about : './src/pages/about.js',
+    projects : './src/pages/projects.js',
+    contact : './src/pages/contact.js',
+  },
   output: {
     filename: '[name].bundle.js',
     path: path.resolve(__dirname, 'dist'),
@@ -11,7 +16,7 @@ module.exports = {
   devtool: 'inline-source-map',
   plugins: [
     new HtmlWebpackPlugin({
-      title: 'Output Management',
+      title: `Enzo's Portfolio`,
     }),
   ],
   devServer: {
@@ -34,6 +39,8 @@ module.exports = {
     ],
   },
   optimization: {
-    runtimeChunk: 'single',
+    splitChunks: {
+      chunks: "all",
+    },
   },
 };
