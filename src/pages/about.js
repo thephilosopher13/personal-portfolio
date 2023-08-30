@@ -1,8 +1,20 @@
+import css from '../assets/css3-original.svg'
+import eslint from '../assets/eslint-original.svg'
+import git from '../assets/git-original.svg'
+import html from '../assets/html5-original.svg'
+import javascript from '../assets/javascript-original.svg'
+import jest from '../assets/jest-plain.svg'
+import linux from '../assets/linux-original.svg'
+import nodejs from '../assets/nodejs-original.svg'
+import vscode from '../assets/vscode-original.svg'
+import webpack from '../assets/webpack-original.svg'
+import '../pages/pagestyles/aboutstyles.css'
+
+
 const aboutModule = (() => {
 
     const div = document.createElement('div')
     const span = document.createElement('span')
-    const img = document.createElement('img')
     const p = document.createElement('p')
     const h1 = document.createElement('h1')
 
@@ -28,39 +40,41 @@ const aboutModule = (() => {
         return myStoryDiv
     }
 
-    const createSkillDiv = (alt, src1x, src2x, src) => {
-        const skillDiv = div.cloneNode()
-        const skillImgSpan = span.cloneNode()
-        const skillImg = img.cloneNode()
-        const skillDescription = p.cloneNode()
-
-        skillDiv.classList.add = 'skill-div'
-        skillImgSpan.classList.add = 'skill-img-span'
-        skillImg.classList.add = 'skill-img'
-        skillImg.alt = alt
-        skillImg.srcset = `${src1x} 1x, ${src2x} 2x, `
-        skillImg.src = src
-
-        skillImgSpan.appendChild(skillImg)
-        skillDiv.appendChild(skillImgSpan)
-        skillDiv.appendChild(skillDescription)
-
-        return skillDiv
-    }
-
     const createSkillListDiv = () => {
         const skillListDiv = div.cloneNode()
         const skillListTitle = h1.cloneNode()
         const skillListGrid = div.cloneNode()
-
-        //insert array here containing objects with img src and name of skill
-        //run the above skill div creator with that array and the objects' properties as arguments ggez
+        const svgArray = [
+            {svg: css, desc: 'CSS'}, 
+            {svg: eslint, desc: 'ESLint'}, 
+            {svg: git, desc: 'Git'}, 
+            {svg: html, desc: 'HTML'}, 
+            {svg: javascript, desc: 'Javascript'}, 
+            {svg: jest, desc: 'Jest'}, 
+            {svg: linux, desc: 'Linux CLI'}, 
+            {svg: nodejs, desc: 'Node.js'}, 
+            {svg: vscode, desc: 'VSCode'}, 
+            {svg: webpack, desc: 'Webpack'}
+        ]
 
         skillListDiv.id = 'skill-list'
         skillListGrid.id = 'skill-list-grid'
         skillListTitle.textContent = 'Skills/Tools'
 
-        //append all the skill div to the grid
+        svgArray.forEach(svg => {
+            const skillItem = div.cloneNode()
+            const skillSvgSpan = span.cloneNode()
+            const skillDescription = p.cloneNode()
+
+            skillSvgSpan.classList.add('skill-icon')
+
+            skillSvgSpan.innerHTML = svg.svg
+            skillDescription.textContent = svg.desc
+
+            skillItem.appendChild(skillSvgSpan)
+            skillItem.appendChild(skillDescription)
+            skillListGrid.appendChild(skillItem)
+        })
 
         skillListDiv.appendChild(skillListTitle)
         skillListDiv.appendChild(skillListGrid)
