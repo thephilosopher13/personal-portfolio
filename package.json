@@ -12,7 +12,7 @@
     "deploy": "gh-pages -d dist"
   },
   "repository": {
-    "url": "git+https://github.com/thephilosopher13/thephilosopher.github.io.git"
+    "url": "git+https://github.com/thephilosopher13/thephilosopher13.github.io.git"
   },
   "keywords": [],
   "author": "",
