@@ -4,7 +4,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 module.exports = {
   mode: 'development',
   entry: {
-    home : './src/pages/home.js',
+    index : './src/pages/index.js',
     about: './src/pages/about.js',
     projects: './src/pages/projects.js',
     contact:'./src/pages/contact.js'
@@ -18,15 +18,21 @@ module.exports = {
   plugins: [
     new HtmlWebpackPlugin({
       inject: true,
-      template: './/home.html',
-      filename: './home.html',
-      chunks: ["home"],
+      filename: 'index.html',
+      template: './index.html',
+      chunks: ["index"],
     }),
     new HtmlWebpackPlugin({
       inject: true,
       filename: 'about.html',
       template: './about.html',
       chunks: ["about"],
+    }),
+    new HtmlWebpackPlugin({
+      inject: true,
+      filename: 'contact.html',
+      template: './contact.html',
+      chunks: ["contact"],
     }),
   ],
   devServer: {

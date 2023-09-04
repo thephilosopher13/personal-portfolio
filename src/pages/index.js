@@ -1,4 +1,4 @@
-import './pagestyles/homestyles.css'
+import './pagestyles/indexstyles.css'
 import './pagestyles/styles.css'
 
 const homepageModule = (() => {
@@ -29,7 +29,8 @@ const homepageModule = (() => {
         hello.classList.add('intro-h2')
         iama.classList.add('intro-h2')
         name.classList.add('intro-h1')
-        learnMoreLink.textContent = 'learn-more-button'
+        learnMoreLink.id = 'learn-more-button'
+        learnMoreLink.textContent = 'Learn more about me!'
         homeContentDiv.id = 'home-content'
 
         appenderFunction(homeContentDiv, [hello, name, iama, learnMoreLink])

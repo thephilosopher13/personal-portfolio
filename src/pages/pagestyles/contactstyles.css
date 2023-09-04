@@ -1,0 +1,165 @@
+.contact-list {
+    display: flex;
+    flex-direction: column;
+    padding-left: 0;
+}
+
+.contact-svg {
+    height: 3rem;
+    width: 3rem;
+    display: block;
+    margin: 0;
+    fill: #FFFFFF;
+}
+
+.contact-svg > svg {
+    height: 3rem;
+    width: 3rem;
+    display: block;
+    fill: #FFFFFF;
+    position: relative;
+}
+
+.list-item {
+    display: flex;
+    flex-direction: row;
+    color: #FFFFFF;
+    font-size: 3rem;
+}
+
+.list-item > a {
+    margin-left: 3rem;
+    font-size: 3rem;
+}
+
+@media (min-width: 461px) and (max-width: 900px) {
+    .list-item > a {
+        font-size: 1.75rem;
+        margin-left: 1.5rem;
+    }
+    .contact-svg > svg {
+        height: 1.75rem;
+        width: 1.75rem;
+    }
+    .contact-svg {
+        height: 1.75rem;
+        width: 1.75rem;
+    }
+}
+
+@media (min-width: 300px) and (max-width: 460px) {
+    .list-item > a{
+        font-size: 1.25rem;
+        margin-left: 0.5rem;
+    }
+    .contact-svg > svg {
+        height: 1.25rem;
+        width: 1.25rem;
+    }
+    .contact-svg {
+        height: 1.25rem;
+        width: 1.25rem;
+    }
+}
+
+@media (max-width: 299px) {
+    .list-item > a{
+        font-size: 0.8rem;
+        margin-left: 0.5rem;
+    }
+    .contact-svg > svg {
+        height: 0.8rem;
+        width: 0.8rem;
+    }
+    .contact-svg {
+        height: 0.8rem;
+        width: 0.8rem;
+    }
+}
+
+.contact-list > :nth-child(1) {
+    animation: fade-in 0.5s, slide-from-left 0.5s;
+}
+
+.contact-list > :nth-child(2) {
+    animation: second-fade-in 1s, second-slide-from-left 1s;
+}
+
+.contact-list > :nth-child(3) {
+    animation: third-fade-in 1.5s, third-slide-from-left 1.5s;
+}
+
+@keyframes fade-in {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes second-fade-in {
+    from {
+        opacity: 0;
+    }
+    50% {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes third-fade-in {
+    from {
+        opacity: 0;
+    }
+    66% {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slide-from-left {
+    from {
+        left: -5rem;
+        position: relative;
+    }
+    to {
+        left: 0;
+        position: relative;
+    }
+}
+
+@keyframes second-slide-from-left {
+    from {
+        left: -5rem;
+        position: relative;
+    }
+    50% {
+        left: -5rem;
+        position: relative;
+    }
+    to {
+        left: 0;
+        position: relative;
+    }
+}
+
+@keyframes third-slide-from-left {
+    from {
+        left: -5rem;
+        position: relative;
+    }
+    66% {
+        left: -5rem;
+        position: relative;
+    }
+    to {
+        left: 0;
+        position: relative;
+    }
+}
+
