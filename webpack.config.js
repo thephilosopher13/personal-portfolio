@@ -30,6 +30,12 @@ module.exports = {
     }),
     new HtmlWebpackPlugin({
       inject: true,
+      filename: 'projects.html',
+      template: './projects.html',
+      chunks: ["projects"],
+    }),
+    new HtmlWebpackPlugin({
+      inject: true,
       filename: 'contact.html',
       template: './contact.html',
       chunks: ["contact"],
