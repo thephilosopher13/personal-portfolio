@@ -1,7 +1,7 @@
 import linkedin from '../assets/linkedin-plain.svg'
 import github from '../assets/github-mark-white.svg'
 import email from '../assets/at.svg'
-import './Contact.svg'
+import './Contact.css'
 
 export default function Contact() {
     const contactListArray = [

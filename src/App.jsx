@@ -1,6 +1,7 @@
 import { useState } from 'react'
-import { Home } from './components/Home'
-import { Contact } from './components/Contact'
+import Home from './components/Home'
+import About from './components/About'
+import Contact from './components/Contact'
 import './App.css'
 
 function App() {
@@ -13,7 +14,7 @@ function App() {
   } else if (activeLink === 'about') {
     content = <About />
   } else if (activeLink === 'projects') {
-    content = //project div
+    content = <div>tite</div>
   } else if (activeLink === 'contact') {
     content = <Contact />
   }
@@ -23,10 +24,10 @@ function App() {
     <>
       <header>
         <ul>
-          <li class="link" ><button onClick={() => setActiveLink('index')}>Home</button></li>
-          <li class="link" ><button onClick={() => setActiveLink('about')}>About</button></li>
-          <li class="link" ><button onClick={() => setActiveLink('projects')}>Projects</button></li>
-          <li class="link" ><button onClick={() => setActiveLink('contact')}>Contact</button></li>
+          <li className="link" ><button onClick={() => setActiveLink('index')}>Home</button></li>
+          <li className="link" ><button onClick={() => setActiveLink('about')}>About</button></li>
+          <li className="link" ><button onClick={() => setActiveLink('projects')}>Projects</button></li>
+          <li className="link" ><button onClick={() => setActiveLink('contact')}>Contact</button></li>
         </ul>
       </header>
       <div id="content">
