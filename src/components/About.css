@@ -31,6 +31,10 @@
     text-align: center;
 }
 
+#skill-list-grid > div {
+    justify-self: center;
+}
+
 @media (min-width: 851px) and (max-width: 1500px) {
     #skill-list-grid {
         grid-template-rows: repeat(2, 1fr);
@@ -56,9 +60,6 @@
     #skill-list-grid {
         grid-template-rows: repeat(10, 1fr);
         grid-template-columns: 1fr;
-    }
-    #skill-list-grid > div {
-        justify-self: center;
     }
 }
 

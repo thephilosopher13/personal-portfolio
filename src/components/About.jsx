@@ -10,7 +10,7 @@ import vscode from '../assets/vscode-original.svg'
 import webpack from '../assets/webpack-original.svg'
 import './About.css'
 
-export function About() {
+export default function About() {
 
     const svgArray = [
         {svg: css, desc: 'CSS'}, 
@@ -38,7 +38,7 @@ export function About() {
                 <div id='skill-list-grid'>
                     {svgArray.map((svg, index) => (
                         <div key={index}>
-                            <span className='skill-icon'>{svg.svg}</span>
+                            <span className='skill-icon'><img src={svg.svg} alt={svg.desc}></img></span>
                             <p>{svg.desc}</p>
                         </div>
                     ))}

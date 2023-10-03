@@ -22,7 +22,7 @@ function App() {
 
   return (
     <>
-      <header>
+      <header id='header'>
         <ul>
           <li className="link" ><button onClick={() => setActiveLink('index')}>Home</button></li>
           <li className="link" ><button onClick={() => setActiveLink('about')}>About</button></li>

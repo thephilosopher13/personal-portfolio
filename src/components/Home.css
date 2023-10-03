@@ -63,8 +63,13 @@
     animation-name: button-reveal;
     border-radius: 0.5rem;
     align-self: center;
+    font-weight: 700;
+    font-size: 1.5rem;
+    border: none;
+    cursor: pointer;
     transition: background-color 1s ease-out 0.25s;
 }
+
 
 #learn-more-button:hover {
     background-color: #FCA311;
